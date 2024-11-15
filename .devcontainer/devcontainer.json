@@ -1,10 +1,10 @@
 {
-  "name": "llamachain",
-  "service": "langchain",
+  "name": "agentic_chatbot",
+  "service": "agentic_chatbot",
   "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:dev-20-bullseye",
   "runArgs": [
         "--name",
-        "langgraph",
+        "agentic_chatbot",
         "-v",
         "${localEnv:HOME}/.ssh:/root/.ssh/"
         
