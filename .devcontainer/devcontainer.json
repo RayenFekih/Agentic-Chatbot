@@ -1,0 +1,62 @@
+{
+  "name": "llamachain",
+  "service": "langchain",
+  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:dev-20-bullseye",
+  "runArgs": [
+        "--name",
+        "langgraph",
+        "-v",
+        "${localEnv:HOME}/.ssh:/root/.ssh/"
+        
+  ],
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/turborepo-npm:1": {},
+    "ghcr.io/devcontainers-contrib/features/typescript:2": {},
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11",
+      "toolsToInstall": [
+        "flake8",
+        "black",
+        "mypy",
+        "poetry"
+      ]
+    }
+  },
+  "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.formatOnSave": true,
+                "editor.defaultFormatter": "charliermarsh.ruff",
+                "editor.codeActionsOnSave": {
+                    "source.organizeImports": "explicit"
+                },
+                "python.languageServer": "Pylance",
+                "autoDocstring.docstringFormat": "google",
+                "autoDocstring.generateDocstringOnEnter": true,
+                "autoDocstring.guessTypes": true,
+                "extensions.verifySignature": false
+            },
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "ms-python.python",
+                "ms-python.debugpy",
+                "ms-python.vscode-pylance",
+                "charliermarsh.ruff",
+                "KevinRose.vsc-python-indent",
+                "usernamehw.errorlens",
+                "njpwerner.autodocstring",
+                "tamasfe.even-better-toml",
+                "ms-vscode.makefile-tools",
+                "yzhang.markdown-all-in-one",
+                "mutantdino.resourcemonitor",
+                "mechatroner.rainbow-csv",
+                "ms-toolsai.jupyter"
+            ]
+        }
+  },
+  "forwardPorts": [
+    3000,
+    8000
+  ],
+  "postCreateCommand": "poetry install"
+}
