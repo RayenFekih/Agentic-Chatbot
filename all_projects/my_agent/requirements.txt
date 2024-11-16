@@ -1,0 +1,9 @@
+langchain_community
+langchain_core
+langchain_openai
+langgraph
+langgraph-checkpoint-sqlite
+langchain_ollama
+langchain_groq
+pandas
+langchain_experimental
