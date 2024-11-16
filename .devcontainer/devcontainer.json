@@ -24,18 +24,18 @@
   },
   "customizations": {
         "vscode": {
-            "settings": {
-                "editor.formatOnSave": true,
-                "editor.defaultFormatter": "charliermarsh.ruff",
-                "editor.codeActionsOnSave": {
-                    "source.organizeImports": "explicit"
-                },
-                "python.languageServer": "Pylance",
-                "autoDocstring.docstringFormat": "google",
-                "autoDocstring.generateDocstringOnEnter": true,
-                "autoDocstring.guessTypes": true,
-                "extensions.verifySignature": false
-            },
+            // "settings": {
+            //     "editor.formatOnSave": true,
+            //     "editor.defaultFormatter": "charliermarsh.ruff",
+            //     "editor.codeActionsOnSave": {
+            //         "source.organizeImports": "explicit"
+            //     },
+            //     "python.languageServer": "Pylance",
+            //     "autoDocstring.docstringFormat": "google",
+            //     "autoDocstring.generateDocstringOnEnter": true,
+            //     "autoDocstring.guessTypes": true,
+            //     "extensions.verifySignature": false
+            // },
             // Add the IDs of extensions you want installed when the container is created.
             "extensions": [
                 "ms-python.python",

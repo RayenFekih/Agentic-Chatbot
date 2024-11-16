@@ -71,6 +71,10 @@ def select_next_node(state: State):
         return "human"
     return tools_condition(state)
 
+# def count_quatity(data: pd.Dataframe, product_id: str) -> int:
+#     return data.groupby(product_id).count()
+
+# data = pd.read_csv("data.csv")
 
 tool = TavilySearchResults(max_results=2)
 tools = [tool]
@@ -101,5 +105,5 @@ memory = SqliteSaver.from_conn_string(":memory:")
 
 graph = graph_builder.compile(
     checkpointer=MemorySaver(),
-    interrupt_before=[],
+    interrupt_before=["human"],
 )
